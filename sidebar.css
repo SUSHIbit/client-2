@@ -83,6 +83,7 @@ body {
     transform: translateX(-100%);
     transition: transform 300ms ease-in-out;
     overflow-y: auto;
+    overflow-x: hidden;
     z-index: 1002;
     display: flex;
     flex-direction: column;
@@ -92,6 +93,7 @@ body {
     padding: 0 24px 24px 24px;
     flex: 1;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #main-sidebar-view::-webkit-scrollbar {
@@ -486,6 +488,7 @@ body {
 .games-provider-content {
     flex: 1;
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 0 24px;
     -ms-overflow-style: none;
     scrollbar-width: none;
