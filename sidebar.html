@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mrpay9 - Sidebar Navigation Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <div id="hamburger-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Backdrop Overlay -->
+    <div id="backdrop-overlay"></div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <!-- Main Sidebar View -->
+        <div id="main-sidebar-view">
+            <!-- Sidebar Header -->
+            <div class="sidebar-header">
+                <div class="header-content">
+                    <div class="logo">mrpay<span class="logo-accent">9</span></div>
+                    <div class="close-btn">&times;</div>
+                </div>
+                <div class="tagline">Feel The Thrill Of Jackpot Spin At GTX33</div>
+            </div>
+
+        <!-- Top Actions (2x2 Grid) -->
+        <div class="top-actions">
+            <button class="action-btn" onclick="promopage(2)">
+                <div class="action-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <div class="action-label">Lucky Spin</div>
+            </button>
+            <button class="action-btn" onclick="promopage(5)">
+                <div class="action-icon">
+                    <i class="fas fa-treasure-chest"></i>
+                </div>
+                <div class="action-label">Treasure Chest</div>
+            </button>
+            <button class="action-btn" onclick="promopage(6)">
+                <div class="action-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="action-label">Daily Mission</div>
+            </button>
+            <button class="action-btn" onclick="promopage(7)">
+                <div class="action-icon">
+                    <i class="fas fa-dice"></i>
+                </div>
+                <div class="action-label">Plinko Ball</div>
+            </button>
+        </div>
+
+        <!-- Main Navigation Menu -->
+        <nav class="main-menu">
+            <a href="/home" class="menu-item">
+                <i class="fas fa-home menu-icon"></i>
+                <span>Home</span>
+            </a>
+            <a href="/deposit" class="menu-item">
+                <i class="fas fa-wallet menu-icon"></i>
+                <span>Deposit</span>
+            </a>
+            <div class="menu-item" id="games-provider-toggle">
+                <i class="fas fa-gamepad menu-icon"></i>
+                <span>Games Provider</span>
+            </div>
+            <a href="/gamertp" class="menu-item">
+                <i class="fas fa-chart-bar menu-icon"></i>
+                <span>Game RTP</span>
+            </a>
+            <a href="/leaderboard" class="menu-item">
+                <i class="fas fa-fire menu-icon"></i>
+                <span>Trending Games</span>
+            </a>
+            <a href="/promotion" class="menu-item">
+                <i class="fas fa-gift menu-icon"></i>
+                <span>Promotion</span>
+            </a>
+            <a href="https://vgs96.com/" class="menu-item">
+                <i class="fas fa-handshake menu-icon"></i>
+                <span>Partnership</span>
+            </a>
+            <a href="https://www.mrpay9auh5api.live/uploads/appwrap.html" class="menu-item">
+                <i class="fas fa-mobile-alt menu-icon"></i>
+                <span>Download Mobile App</span>
+            </a>
+            <a href="https://mrpay9movies.com/" class="menu-item">
+                <i class="fas fa-film menu-icon"></i>
+                <span>Movie Club</span>
+            </a>
+            <a href="https://mrpay9pornn.com/" class="menu-item">
+                <i class="fas fa-video menu-icon"></i>
+                <span>Movie 18+</span>
+            </a>
+        </nav>
+
+        <!-- Exclusive Partners Section -->
+        <div class="partners-section">
+            <h2 class="section-title">Exclusive Partners</h2>
+            <a href="https://king88pokies.com/RFVIPPARTNERSHIP" class="partner-btn" target="_blank">
+                <img src="https://static.gwvkyk.com/media/e2731f13220960550e40a.png" alt="King88Pokies">
+                <span class="partner-name">King88Pokies</span>
+            </a>
+            <a href="https://enjoy2win99.com/RFVVIPPARTNER" class="partner-btn" target="_blank">
+                <img src="https://static.gwvkyk.com/media/a66b9b23220968d476cae.png" alt="Enjoy2Win99">
+                <span class="partner-name">Enjoy2Win99</span>
+            </a>
+            <a href="https://www.king88.bet/" class="partner-btn" target="_blank">
+                <img src="https://static.gwvkyk.com/media/c7a9c63322096cd8c7978.png" alt="King88.bet">
+                <span class="partner-name">King88.bet</span>
+            </a>
+        </div>
+
+        <!-- Top Tournament Ranking Section -->
+        <div class="tournament-section">
+            <h2 class="section-title">Top Tournament Ranking</h2>
+            <a href="https://mrpay9.com/topdeposit" class="tournament-link" target="_blank">
+                <i class="fas fa-trophy"></i>
+                <span>Top Deposit Ranking</span>
+            </a>
+            <a href="https://mrpay9.com/topreferral" class="tournament-link" target="_blank">
+                <i class="fas fa-users"></i>
+                <span>Top Referral Ranking</span>
+            </a>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="social-section">
+            <h2 class="section-title">Follow Us ON</h2>
+            <a href="https://www.facebook.com/profile.php?id=61571883860829" class="social-btn social-btn--facebook" target="_blank">
+                <i class="fab fa-facebook"></i>
+                <span>Facebook</span>
+            </a>
+            <a href="https://t.me/mrpay9australia" class="social-btn social-btn--telegram" target="_blank">
+                <i class="fab fa-telegram"></i>
+                <span>Telegram</span>
+            </a>
+        </div>
+        </div>
+
+        <!-- Games Provider Search View -->
+        <div id="games-provider-view" class="hidden">
+            <!-- Header with Back Button -->
+            <div class="games-header">
+                <button class="back-btn" id="back-to-main">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h2 class="games-title">Games Provider</h2>
+                <div class="close-btn">&times;</div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="provider-search" placeholder="Search game providers..." class="search-input">
+                </div>
+            </div>
+
+            <!-- Game Providers List -->
+            <div class="providers-list">
+                <a href="/gameList/3OAKS/SLOT/X/X" class="provider-item" data-name="3OAKS">3OAKS</a>
+                <a href="/gameList/759GAMING/SLOT/X/X" class="provider-item" data-name="759GAMING">759GAMING</a>
+                <a href="/gameList/3WIN8/SLOT/X/X" class="provider-item" data-name="3WIN8">3WIN8</a>
+                <a href="/gameList/918KAYA/SLOT/X/X" class="provider-item" data-name="918KAYA">918KAYA</a>
+                <a href="/gameList/888KING/SLOT/X/X" class="provider-item" data-name="888KING">888KING</a>
+                <a href="/gameList/ACE333/SLOT/X/X" class="provider-item" data-name="ACE333">ACE333</a>
+                <a href="/gameList/AIGAMING/SLOT/X/X" class="provider-item" data-name="AIGAMING">AIGAMING</a>
+                <a href="/gameList/ACEWIN/SLOT/X/X" class="provider-item" data-name="ACEWIN">ACEWIN</a>
+                <a href="/gameList/BNG/SLOT/X/X" class="provider-item" data-name="BNG">BNG</a>
+                <a href="/gameList/BOOONGO/SLOT/X/X" class="provider-item" data-name="BOOONGO">BOOONGO</a>
+                <a href="/gameList/BONZA/SLOT/X/X" class="provider-item" data-name="BONZA">BONZA</a>
+                <a href="/gameList/BGAMING/SLOT/X/X" class="provider-item" data-name="BGAMING">BGAMING</a>
+                <a href="/gameList/BESOFT/SLOT/X/X" class="provider-item" data-name="BESOFT">BESOFT</a>
+                <a href="/gameList/BTGAMING/SLOT/X/X" class="provider-item" data-name="BTGAMING">BTGAMING</a>
+                <a href="/gameList/BIGPOT/SLOT/X/X" class="provider-item" data-name="BIGPOT">BIGPOT</a>
+                <a href="/gameList/CQ9/SLOT/X/X" class="provider-item" data-name="CQ9">CQ9</a>
+                <a href="/gameList/CROWDPLAY/SLOT/X/X" class="provider-item" data-name="CROWDPLAY">CROWDPLAY</a>
+                <a href="/gameList/CLOTPLAY/SLOT/X/X" class="provider-item" data-name="CLOTPLAY">CLOTPLAY</a>
+                <a href="/gameList/CREATIVEGAMING/SLOT/X/X" class="provider-item" data-name="CREATIVEGAMING">CREATIVEGAMING</a>
+                <a href="/gameList/CT855/SLOT/X/X" class="provider-item" data-name="CT855">CT855</a>
+                <a href="/gameList/DRAGOONSOFT/SLOT/X/X" class="provider-item" data-name="DRAGOONSOFT">DRAGOONSOFT</a>
+                <a href="/gameList/DREAMGAMING/SLOT/X/X" class="provider-item" data-name="DREAMGAMING">DREAMGAMING</a>
+                <a href="/gameList/EVO888H5/SLOT/X/X" class="provider-item" data-name="EVO888H5">EVO888H5</a>
+                <a href="/gameList/FACHAI/SLOT/X/X" class="provider-item" data-name="FACHAI">FACHAI</a>
+                <a href="/gameList/HABANERO/SLOT/X/X" class="provider-item" data-name="HABANERO">HABANERO</a>
+                <a href="/gameList/HACKSAW/SLOT/X/X" class="provider-item" data-name="HACKSAW">HACKSAW</a>
+                <a href="/gameList/IBEX/SLOT/X/X" class="provider-item" data-name="IBEX">IBEX</a>
+                <a href="/gameList/ILOVEU/SLOT/X/X" class="provider-item" data-name="ILOVEU">ILOVEU</a>
+                <a href="/gameList/JILI/SLOT/X/X" class="provider-item" data-name="JILI">JILI</a>
+                <a href="/gameList/JDB/SLOT/X/X" class="provider-item" data-name="JDB">JDB</a>
+                <a href="/gameList/JOKER/SLOT/X/X" class="provider-item" data-name="JOKER">JOKER</a>
+                <a href="/gameList/LIVE22/SLOT/X/X" class="provider-item" data-name="LIVE22">LIVE22</a>
+                <a href="/gameList/IMPERIUM/SLOT/X/X" class="provider-item" data-name="IMPERIUM">IMPERIUM</a>
+                <a href="/gameList/MINITEDGAMING/SLOT/X/X" class="provider-item" data-name="MINITEDGAMING">MINITEDGAMING</a>
+                <a href="/gameList/MICROGAMING/SLOT/X/X" class="provider-item" data-name="MICROGAMING">MICROGAMING</a>
+                <a href="/gameList/MARIO/SLOT/X/X" class="provider-item" data-name="MARIO">MARIO</a>
+                <a href="/gameList/MEGAH5/SLOT/X/X" class="provider-item" data-name="MEGAH5">MEGAH5</a>
+                <a href="/gameList/M8BET/SLOT/X/X" class="provider-item" data-name="M8BET">M8BET</a>
+                <a href="/gameList/NOVOMATIC/SLOT/X/X" class="provider-item" data-name="NOVOMATIC">NOVOMATIC</a>
+                <a href="/gameList/NEXTSPIN/SLOT/X/X" class="provider-item" data-name="NEXTSPIN">NEXTSPIN</a>
+                <a href="/gameList/PLAYSON/SLOT/X/X" class="provider-item" data-name="PLAYSON">PLAYSON</a>
+                <a href="/gameList/PEGASUS/SLOT/X/X" class="provider-item" data-name="PEGASUS">PEGASUS</a>
+                <a href="/gameList/PLAYSTAR/SLOT/X/X" class="provider-item" data-name="PLAYSTAR">PLAYSTAR</a>
+                <a href="/gameList/PRAGMATIC/SLOT/X/X" class="provider-item" data-name="PRAGMATIC">PRAGMATIC</a>
+                <a href="/gameList/RICHGAMING/SLOT/X/X" class="provider-item" data-name="RICHGAMING">RICHGAMING</a>
+                <a href="/gameList/SPADEGAMING/SLOT/X/X" class="provider-item" data-name="SPADEGAMING">SPADEGAMING</a>
+                <a href="/gameList/SCRATCH/SLOT/X/X" class="provider-item" data-name="SCRATCH">SCRATCH</a>
+                <a href="/gameList/UUSLOT/SLOT/X/X" class="provider-item" data-name="UUSLOT">UUSLOT</a>
+                <a href="/gameList/VPOWER/SLOT/X/X" class="provider-item" data-name="VPOWER">VPOWER</a>
+                <a href="/gameList/WAZDAN/SLOT/X/X" class="provider-item" data-name="WAZDAN">WAZDAN</a>
+                <a href="/gameList/WFGAMING/SLOT/X/X" class="provider-item" data-name="WFGAMING">WFGAMING</a>
+                <a href="/gameList/WCASINO/SLOT/X/X" class="provider-item" data-name="WCASINO">WCASINO</a>
+                <a href="/gameList/WOWGAMING/SLOT/X/X" class="provider-item" data-name="WOWGAMING">WOWGAMING</a>
+                <a href="/gameList/WWBET/SLOT/X/X" class="provider-item" data-name="WWBET">WWBET</a>
+                <a href="/gameList/XE88/SLOT/X/X" class="provider-item" data-name="XE88">XE88</a>
+                <a href="/gameList/YEEBET/SLOT/X/X" class="provider-item" data-name="YEEBET">YEEBET</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Input for Promo UserID -->
+    <input type="hidden" value="@UserID" id="promoUserID" ref="jdkUserId">
+
+    <script src="sidebar.js"></script>
+</body>
+</html>
